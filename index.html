@@ -8,6 +8,9 @@
         <script src="expect.js"></script>
         <script src="loader.js"></script>
         <script>
+            if (typeof Promise === 'undefined') {
+                document.write('<' + 'script src="bluebird.min.js"></' + 'script>');
+            }
             var requirejs, require, define, score;
             mocha.setup({
                 ui: 'bdd',
